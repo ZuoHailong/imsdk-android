@@ -62,7 +62,6 @@ import com.qunar.im.protobuf.Event.QtalkEvent;
 import com.qunar.im.protobuf.common.LoginType;
 import com.qunar.im.protobuf.common.ProtoMessageOuterClass;
 import com.qunar.im.protobuf.dispatch.DispatchHelper;
-import com.qunar.im.thirdpush.core.QPushClient;
 import com.qunar.im.ui.R;
 import com.qunar.im.ui.broadcastreceivers.ConnectionStateReceiver;
 import com.qunar.im.ui.broadcastreceivers.ShareReceiver;
@@ -78,7 +77,6 @@ import com.qunar.im.ui.presenter.views.ILoginView;
 import com.qunar.im.ui.presenter.views.IMainView;
 import com.qunar.im.ui.schema.QOpenHomeTabImpl;
 import com.qunar.im.ui.services.PullPatchService;
-import com.qunar.im.ui.services.PushServiceUtils;
 import com.qunar.im.ui.util.NotificationUtils;
 import com.qunar.im.ui.util.ParseErrorEvent;
 import com.qunar.im.ui.util.QRRouter;
@@ -356,9 +354,6 @@ public class TabMainActivity extends IMBaseActivity implements PermissionCallbac
         clearIntent.setAction("com.qunar.ops.push.CLEAR_NOTIFY");
         clearIntent.setPackage(this.getApplicationContext().getPackageName());
         Utils.sendLocalBroadcast(clearIntent, this.getApplicationContext());
-
-        //push清理
-        QPushClient.clearNotification(this);
 
         regiestNetWorkChangeListener();
 
@@ -1139,16 +1134,6 @@ public class TabMainActivity extends IMBaseActivity implements PermissionCallbac
             }
         });
 
-        //登录成功，启动push
-        boolean isRegister = presenter.checkUnique();
-        if (CurrentPreference.getInstance().isTurnOnPsuh()) {
-            if (isRegister) {
-                PushServiceUtils.stopAMDService(TabMainActivity.this);
-            }
-            PushServiceUtils.startAMDService(TabMainActivity.this);
-        } else {
-            PushServiceUtils.stopAMDService(TabMainActivity.this);
-        }
         //检查更新
         checkUpdate();
 //        DiscoverFragment.clearBridge();

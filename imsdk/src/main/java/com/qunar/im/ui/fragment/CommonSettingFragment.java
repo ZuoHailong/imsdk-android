@@ -17,7 +17,6 @@ import com.qunar.im.base.util.MediaUtils;
 import com.qunar.im.common.CurrentPreference;
 import com.qunar.im.ui.R;
 import com.qunar.im.ui.activity.IMBaseActivity;
-import com.qunar.im.ui.services.PushServiceUtils;
 
 /**
  * Created by zhaokai on 15-9-18.
@@ -135,11 +134,6 @@ public class CommonSettingFragment extends BaseFragment implements IProfileView,
 
         } else if (i == R.id.chk_push_msg) {
             profilePresenter.changePushState();
-            if (isChecked) {
-                PushServiceUtils.startAMDService(getActivity());
-            } else {
-                PushServiceUtils.stopAMDService(getActivity());
-            }
             ((IMBaseActivity) getActivity()).presenter.checkUnique();
 
         } else if (i == R.id.shake_event) {

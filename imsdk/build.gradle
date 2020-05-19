@@ -34,7 +34,7 @@ dependencies {
 
     api project(':lib_rn')
     api project(':lib_rtc')
-    api project(':push_service')
+//    api project(':push_service')
 
     //maven
 //    api 'com.startalk.im:sdk-base:3.0.7'

@@ -42,7 +42,6 @@ import com.qunar.im.ui.activity.PbChatActivity;
 import com.qunar.im.ui.activity.QunarWebActvity;
 import com.qunar.im.ui.activity.SettingActivity;
 import com.qunar.im.ui.activity.WebMsgActivity;
-import com.qunar.im.ui.services.PushServiceUtils;
 import com.qunar.im.ui.util.UpdateManager;
 
 import java.util.List;
@@ -166,7 +165,6 @@ public class MainSettingFragment extends BaseFragment implements View.OnClickLis
     }
 
     private void logout() {
-        PushServiceUtils.stopAMDService(getContext());
         final ILoginPresenter loginPresenter = new LoginPresenter();
         loginPresenter.logout();
 //        QtalkApplicationLike.finishAllActivity();
