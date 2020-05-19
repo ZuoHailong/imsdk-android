@@ -395,19 +395,5 @@ public class WebMsgActivity extends QunarWebActvity implements IChatView {
         return null;
     }
 
-    @Override
-    public void payRedEnvelopChioce(String type,String rid) {
-
-    }
-
-    @Override
-    public void payOrder(String orderInfo) {
-
-    }
-
-    @Override
-    public void payAuth(String authInfo) {
-
-    }
 }
 
