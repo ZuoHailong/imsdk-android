@@ -49,7 +49,7 @@ public class MainActivity extends Activity {
      * @param view
      */
     public void configNavigation(View view) {
-        String url = "";//导航URl
+        String url = "https://i.startalk.im/newapi/nck/qtalk_nav.qunar?c=hngdsoft.com";//导航URl
         if(TextUtils.isEmpty(url)){
             toast("请配置正确的导航地址");
             return;
@@ -75,8 +75,8 @@ public class MainActivity extends Activity {
                     toast(s);
                 });
             }else {
-                final String uid = "";//用户名
-                final String password = "";//密码
+                final String uid = "18538117822";//用户名
+                final String password = "34445131";//密码
                 QIMSdk.getInstance().login(uid, password, (b, s) -> {
                     logcat_text.append("Uid：" + uid + "\n" + "Password：" + password);
                     pd.dismiss();
