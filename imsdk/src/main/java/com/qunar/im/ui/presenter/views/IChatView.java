@@ -94,7 +94,4 @@ public interface IChatView {
 
     void showToast(String str);
 
-    void payAuth(String authInfo);
-    void payOrder(String orderInfo);
-    void payRedEnvelopChioce(String type,String rid);
 }

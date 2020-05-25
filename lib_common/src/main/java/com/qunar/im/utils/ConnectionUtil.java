@@ -46,7 +46,6 @@ import com.qunar.im.common.CommonConfig;
 import com.qunar.im.core.manager.IMDatabaseManager;
 import com.qunar.im.core.manager.IMLogicManager;
 import com.qunar.im.core.manager.IMNotificaitonCenter;
-import com.qunar.im.core.manager.IMPayManager;
 import com.qunar.im.core.services.QtalkNavicationService;
 import com.qunar.im.other.CacheDataType;
 import com.qunar.im.other.IQTalkLoginDelegate;
@@ -2326,21 +2325,6 @@ public class ConnectionUtil {
         intent.putExtra(Constants.BundleKey.IS_VIDEO_AUDIO_CALL,true);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         CommonConfig.globalContext.startActivity(intent);
-    }
-
-    /**
-     * 检查是否绑定了支付宝账户
-     */
-    public void checkAlipayAccount(){
-        IMPayManager.getInstance().checkAlipayAccount();
-    }
-
-    /**
-     * 绑定支付宝账户
-     * @param uid
-     */
-    public void bindAlipayAccount(String uid,String openId){
-        IMPayManager.getInstance().bindAlipayAccount(uid,openId);
     }
 
     /**

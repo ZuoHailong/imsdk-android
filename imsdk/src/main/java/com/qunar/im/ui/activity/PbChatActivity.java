@@ -93,7 +93,6 @@ import com.qunar.im.base.view.faceGridView.EmoticonEntity;
 import com.qunar.im.common.CommonConfig;
 import com.qunar.im.common.CurrentPreference;
 import com.qunar.im.core.manager.IMLogicManager;
-import com.qunar.im.core.manager.IMPayManager;
 import com.qunar.im.core.services.QtalkNavicationService;
 import com.qunar.im.core.utils.GlobalConfigManager;
 import com.qunar.im.log.LogConstans;
@@ -214,7 +213,6 @@ public class PbChatActivity extends SwipeBackActivity implements AtManager.AtTex
     public static final int AT_MEMBER = 0x13;//forresult的key 应该为开启所在群成员列表,方便@
     public static final int RECORD_VIDEO = 0x14;//录制视频
     public static final int TRANSFER_CONVERSATION_REQUEST_CODE = 0x15;//会话转移
-    public static final int HONGBAO = 0x16;//红包
     public static final int ADD_EMOTICON = 0x32;//添加表情
     public static final int ACTIVITY_SELECT_VIDEO = 0x64;//文件选择视频
     public static final int UPDATE_NICK = 0x65;
@@ -4220,63 +4218,6 @@ public class PbChatActivity extends SwipeBackActivity implements AtManager.AtTex
     @Override
     public void sendRobotMsg(String msg) {
         chatingPresenter.sendRobotMsg(msg);
-    }
-
-    @Override
-    public void payRedEnvelopChioce(String type, String rid) {
-        Intent intent = ReflectUtil.getQtalkServiceRNActivityIntent(PbChatActivity.this);
-        if (intent == null) {
-            return;
-        }
-        switch (type) {
-            case Constants.Alipay.RED_ENVELOP_SEND:
-                intent.putExtra("module", Constants.RNKey.PAY);
-                intent.putExtra("Screen", "SendRedPack");
-
-                intent.putExtra("xmppid", jid);
-                intent.putExtra("isChatRoom", isFromChatRoom);
-                startActivity(intent);
-                break;
-            case Constants.Alipay.RED_ENVELOP_DETAIL:
-                intent.putExtra("module", Constants.RNKey.PAY);
-                intent.putExtra("Screen", "RedPackDetail");
-                intent.putExtra("rid", rid);//红包ID
-                intent.putExtra("xmppid", jid);
-                intent.putExtra("isChatRoom", isFromChatRoom);
-                startActivity(intent);
-                break;
-        }
-    }
-
-    @Override
-    public void payAuth(final String authInfo) {
-        IMPayManager.getInstance().payAuth(this, authInfo, resultStatus -> {
-            if (TextUtils.equals(resultStatus, "6001")) {
-                toast(getString(R.string.atom_ui_user_cancel));
-            } else {
-                toast(getString(R.string.atom_ui_auth_fail));
-            }
-        });
-    }
-
-    @Override
-    public void payOrder(String orderInfo) {
-        IMPayManager.getInstance().payOrder(this, orderInfo, resultStatus -> {
-            if (TextUtils.equals(resultStatus, "9000")) {
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                } finally {
-                    connectionUtil.sendEvent(QtalkEvent.PAY_SUCCESS, new Object());
-                    toast(getString(R.string.atom_ui_send_red_packet_success));
-                }
-            } else if (TextUtils.equals(resultStatus, "6001")) {
-                toast(getString(R.string.atom_ui_user_cancel));
-            } else {
-                toast(getString(R.string.atom_ui_pay_fail));
-            }
-        });
     }
 
     @Override
