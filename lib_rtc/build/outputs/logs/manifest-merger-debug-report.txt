@@ -1,0 +1,101 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:1:1-40:12
+INJECTED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:1:1-40:12
+INJECTED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:1:1-40:12
+INJECTED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:1:1-40:12
+INJECTED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:1:1-40:12
+INJECTED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:1:1-40:12
+INJECTED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:1:1-40:12
+	package
+		ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:2:5-31
+		INJECTED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml
+		INJECTED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml
+		ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:1:1-40:12
+		INJECTED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml
+		ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:1:1-40:12
+		INJECTED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:1:11-69
+uses-permission#android.permission.BLUETOOTH
+ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:4:5-68
+	android:name
+		ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:4:22-65
+uses-feature#android.hardware.camera
+ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:6:5-60
+	android:name
+		ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:6:19-57
+uses-feature#android.hardware.camera.autofocus
+ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:7:5-70
+	android:name
+		ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:7:19-67
+uses-feature#0x00020000
+ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:8:5-78
+	android:glEsVersion
+		ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:8:19-51
+	android:required
+		ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:8:52-75
+uses-permission#android.permission.CAMERA
+ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:10:5-65
+	android:name
+		ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:10:22-62
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:11:5-71
+	android:name
+		ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:11:22-68
+uses-permission#android.permission.INTERNET
+ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:12:5-67
+	android:name
+		ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:12:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:13:5-79
+	android:name
+		ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:13:22-76
+uses-permission#android.permission.CHANGE_NETWORK_STATE
+ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:14:5-79
+	android:name
+		ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:14:22-76
+uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
+ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:16:5-80
+	android:name
+		ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:16:22-77
+uses-permission#android.permission.VIBRATE
+ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:17:5-66
+	android:name
+		ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:17:22-63
+application
+ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:19:5-38:19
+activity#com.qunar.im.rtc.activity.RtcActivity
+ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:20:9-23:52
+	android:screenOrientation
+		ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:23:13-49
+	android:launchMode
+		ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:22:13-44
+	android:name
+		ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:21:13-65
+service#com.qunar.im.rtc.service.ChatHandleService
+ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:33:9-37:19
+	android:enabled
+		ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:35:13-35
+	android:exported
+		ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:36:13-36
+	android:name
+		ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:34:13-70
+uses-sdk
+INJECTED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml
+INJECTED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml
+INJECTED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml
+INJECTED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml
+		ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml
+		INJECTED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml
+		ADDED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml
+		INJECTED from E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml

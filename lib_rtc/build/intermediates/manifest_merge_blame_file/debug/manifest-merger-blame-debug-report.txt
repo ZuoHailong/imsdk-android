@@ -1,0 +1,82 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="im.qunar.com.rtc"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="26" />
+9-->E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.BLUETOOTH" />
+11-->E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:4:5-68
+11-->E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:4:22-65
+12
+13    <uses-feature android:name="android.hardware.camera" />
+13-->E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:6:5-60
+13-->E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:6:19-57
+14    <uses-feature android:name="android.hardware.camera.autofocus" />
+14-->E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:7:5-70
+14-->E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:7:19-67
+15    <uses-feature
+15-->E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:8:5-78
+16        android:glEsVersion="0x00020000"
+16-->E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:8:19-51
+17        android:required="true" />
+17-->E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:8:52-75
+18
+19    <uses-permission android:name="android.permission.CAMERA" />
+19-->E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:10:5-65
+19-->E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:10:22-62
+20    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+20-->E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:11:5-71
+20-->E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:11:22-68
+21    <uses-permission android:name="android.permission.INTERNET" />
+21-->E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:12:5-67
+21-->E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:12:22-64
+22    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+22-->E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:13:5-79
+22-->E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:13:22-76
+23    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+23-->E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:14:5-79
+23-->E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:14:22-76
+24    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+24-->E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:16:5-80
+24-->E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:16:22-77
+25    <uses-permission android:name="android.permission.VIBRATE" />
+25-->E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:17:5-66
+25-->E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:17:22-63
+26
+27    <application>
+27-->E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:19:5-38:19
+28        <activity
+28-->E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:20:9-23:52
+29            android:name="com.qunar.im.rtc.activity.RtcActivity"
+29-->E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:21:13-65
+30            android:launchMode="singleTask"
+30-->E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:22:13-44
+31            android:screenOrientation="portrait" />
+31-->E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:23:13-49
+32        <!-- <activity -->
+33        <!-- android:name="com.qunar.im.rtc.scheme.QchatSchemeActivity"> -->
+34        <!-- <intent-filter> -->
+35        <!-- <action android:name="android.intent.action.VIEW" /> -->
+36        <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+37        <!-- <category android:name="android.intent.category.BROWSABLE"/> -->
+38        <!-- <data android:scheme="${SCHEME}" android:host="qcrtc" /> -->
+39        <!-- </intent-filter> -->
+40        <!-- </activity> -->
+41        <service
+41-->E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:33:9-37:19
+42            android:name="com.qunar.im.rtc.service.ChatHandleService"
+42-->E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:34:13-70
+43            android:enabled="true"
+43-->E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:35:13-35
+44            android:exported="true" >
+44-->E:\workspace\0opensource\imsdk-android\lib_rtc\src\main\AndroidManifest.xml:36:13-36
+45        </service>
+46    </application>
+47
+48</manifest>

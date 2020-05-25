@@ -1,0 +1,66 @@
+[
+    {
+        "merged": "E:\\workspace\\github\\imsdk-android\\push_service\\build\\intermediates\\res\\merged\\release\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\3ae3b2541271b4c0da0a1279b436b3cf\\appcompat-1.0.0\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "E:\\workspace\\github\\imsdk-android\\push_service\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\3ae3b2541271b4c0da0a1279b436b3cf\\appcompat-1.0.0\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "E:\\workspace\\github\\imsdk-android\\push_service\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\3ae3b2541271b4c0da0a1279b436b3cf\\appcompat-1.0.0\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "E:\\workspace\\github\\imsdk-android\\push_service\\build\\intermediates\\res\\merged\\release\\anim\\slide_out_to_top.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\17a38f0479bcb7e5fee8c0ced3d68b4c\\Android-PullToRefresh-2.1.1\\res\\anim\\slide_out_to_top.xml"
+    },
+    {
+        "merged": "E:\\workspace\\github\\imsdk-android\\push_service\\build\\intermediates\\res\\merged\\release\\anim\\slide_out_to_bottom.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\17a38f0479bcb7e5fee8c0ced3d68b4c\\Android-PullToRefresh-2.1.1\\res\\anim\\slide_out_to_bottom.xml"
+    },
+    {
+        "merged": "E:\\workspace\\github\\imsdk-android\\push_service\\build\\intermediates\\res\\merged\\release\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\3ae3b2541271b4c0da0a1279b436b3cf\\appcompat-1.0.0\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "E:\\workspace\\github\\imsdk-android\\push_service\\build\\intermediates\\res\\merged\\release\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\3ae3b2541271b4c0da0a1279b436b3cf\\appcompat-1.0.0\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "E:\\workspace\\github\\imsdk-android\\push_service\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\3ae3b2541271b4c0da0a1279b436b3cf\\appcompat-1.0.0\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "E:\\workspace\\github\\imsdk-android\\push_service\\build\\intermediates\\res\\merged\\release\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\3ae3b2541271b4c0da0a1279b436b3cf\\appcompat-1.0.0\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "E:\\workspace\\github\\imsdk-android\\push_service\\build\\intermediates\\res\\merged\\release\\anim\\abc_tooltip_enter.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\3ae3b2541271b4c0da0a1279b436b3cf\\appcompat-1.0.0\\res\\anim\\abc_tooltip_enter.xml"
+    },
+    {
+        "merged": "E:\\workspace\\github\\imsdk-android\\push_service\\build\\intermediates\\res\\merged\\release\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\3ae3b2541271b4c0da0a1279b436b3cf\\appcompat-1.0.0\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "E:\\workspace\\github\\imsdk-android\\push_service\\build\\intermediates\\res\\merged\\release\\anim\\slide_in_from_top.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\17a38f0479bcb7e5fee8c0ced3d68b4c\\Android-PullToRefresh-2.1.1\\res\\anim\\slide_in_from_top.xml"
+    },
+    {
+        "merged": "E:\\workspace\\github\\imsdk-android\\push_service\\build\\intermediates\\res\\merged\\release\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\3ae3b2541271b4c0da0a1279b436b3cf\\appcompat-1.0.0\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "E:\\workspace\\github\\imsdk-android\\push_service\\build\\intermediates\\res\\merged\\release\\anim\\abc_tooltip_exit.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\3ae3b2541271b4c0da0a1279b436b3cf\\appcompat-1.0.0\\res\\anim\\abc_tooltip_exit.xml"
+    },
+    {
+        "merged": "E:\\workspace\\github\\imsdk-android\\push_service\\build\\intermediates\\res\\merged\\release\\anim\\slide_in_from_bottom.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\17a38f0479bcb7e5fee8c0ced3d68b4c\\Android-PullToRefresh-2.1.1\\res\\anim\\slide_in_from_bottom.xml"
+    },
+    {
+        "merged": "E:\\workspace\\github\\imsdk-android\\push_service\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\3ae3b2541271b4c0da0a1279b436b3cf\\appcompat-1.0.0\\res\\anim\\abc_slide_in_top.xml"
+    }
+]

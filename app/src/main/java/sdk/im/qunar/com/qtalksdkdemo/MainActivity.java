@@ -15,10 +15,9 @@ import com.qunar.im.ui.activity.TabMainActivity;
 import com.qunar.im.ui.sdk.QIMSdk;
 
 
-
 public class MainActivity extends Activity {
 
-    private Button autoLoginButton,startPlatForm;
+    private Button autoLoginButton, startPlatForm;
     private TextView logcat_text;
 
     @Override
@@ -35,7 +34,8 @@ public class MainActivity extends Activity {
 
     /**
      * 初始化sdk
-     *只在Application 里调用一次
+     * 只在Application 里调用一次
+     *
      * @param view
      */
     public void initQIMSdk(View view) {
@@ -49,8 +49,8 @@ public class MainActivity extends Activity {
      * @param view
      */
     public void configNavigation(View view) {
-        String url = "https://i.startalk.im/newapi/nck/qtalk_nav.qunar?c=hngdsoft.com";//导航URl
-        if(TextUtils.isEmpty(url)){
+        String url = "https://i.startalk.im/newapi/nck/qtalk_nav.qunar?c=kotlinapk.com";//导航URl
+        if (TextUtils.isEmpty(url)) {
             toast("请配置正确的导航地址");
             return;
         }
@@ -65,18 +65,18 @@ public class MainActivity extends Activity {
      * @param view
      */
     public void login(View view) {
-        if (!QIMSdk.getInstance().isConnected()){
+        if (!QIMSdk.getInstance().isConnected()) {
             final ProgressDialog pd = ProgressDialog.show(this, "提示", "正在登录中。。。");
-            if(QIMSdk.getInstance().isCanAutoLogin()){
+            if (QIMSdk.getInstance().isCanAutoLogin()) {
                 QIMSdk.getInstance().autoLogin((b, s) -> {
                     logcat_text.append(s);
                     pd.dismiss();
                     autoLoginButton.setText(s);
                     toast(s);
                 });
-            }else {
+            } else {
                 final String uid = "18538117822";//用户名
-                final String password = "34445131";//密码
+                final String password = "12345678";//密码
                 QIMSdk.getInstance().login(uid, password, (b, s) -> {
                     logcat_text.append("Uid：" + uid + "\n" + "Password：" + password);
                     pd.dismiss();
@@ -85,38 +85,40 @@ public class MainActivity extends Activity {
                 });
             }
 
-        }
-        else
+        } else
             toast("已登录！");
     }
 
     /**
      * 普通二人会话
+     *
      * @param view
      */
-    public void goToChat(View view){
-        QIMSdk.getInstance().goToChatConv(this,"jid",0);
+    public void goToChat(View view) {
+        QIMSdk.getInstance().goToChatConv(this, "jid", 0);
     }
 
     /**
      * 群会话
+     *
      * @param view
      */
-    public void goToGroup(View view){
-        QIMSdk.getInstance().goToGroupConv(this,"groupid",1);
+    public void goToGroup(View view) {
+        QIMSdk.getInstance().goToGroupConv(this, "f2e00647cf554614a00483ed5f8bb180@conference.kotlinapk.com", 1);
     }
 
     public void startMainActivity(View view) {
 
-        startActivity(new Intent(this,TabMainActivity.class));
+        startActivity(new Intent(this, TabMainActivity.class));
     }
 
     /**
      * 会话页
+     *
      * @param view
      */
-    public void startConversationActivity(View view){
-        startActivity(new Intent(this,ConversationListActivity.class));
+    public void startConversationActivity(View view) {
+        startActivity(new Intent(this, ConversationListActivity.class));
     }
 
     private void toast(final String msg) {

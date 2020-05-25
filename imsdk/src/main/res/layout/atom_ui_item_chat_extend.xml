@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/translate">
+    <!--时间-->
     <TextView
         android:id="@+id/textview_time"
         android:layout_width="wrap_content"
@@ -35,6 +36,7 @@
         android:visibility="gone">
     </com.qunar.im.ui.view.MyLinearLayout>
 
+    <!--对方头像-->
     <com.facebook.drawee.view.SimpleDraweeView
         android:id="@+id/imageview_left"
         android:layout_width="@dimen/atom_ui_image_mid_size"

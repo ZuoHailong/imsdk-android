@@ -344,7 +344,7 @@ public class TabMainActivity extends IMBaseActivity implements PermissionCallbac
 
     @Override
     public void onBackPressed() {
-        Utils.jump2Desktop(TabMainActivity.this);
+//        Utils.jump2Desktop(TabMainActivity.this);
     }
 
     @Override

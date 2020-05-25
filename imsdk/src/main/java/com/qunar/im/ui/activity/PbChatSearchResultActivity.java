@@ -90,13 +90,11 @@ public class PbChatSearchResultActivity extends PbChatActivity  {
                         }
 //                            chat_region.getRefreshableView().setSelection(chat_region.getRefreshableView().getCount() - 1);
                     }
-                    // TODO: 2017/9/5 分享消息？
-                    handlerReceivedData();
-                    getAtOwnMsgIndexs();
+//                    getAtOwnMsgIndexs();
                     if (unread > 5) {
                         showUnreadView(unread);
                         if (isFromChatRoom && atMsgIndex > 0) {
-                            showAtmsgView();
+//                            showAtmsgView();
                         }
                     }
                 }

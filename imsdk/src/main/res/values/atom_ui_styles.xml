@@ -83,9 +83,9 @@
     </style>
     <style name="AppTheme1" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimary">#3F51B5</item>
         <item name="colorPrimaryDark">@color/atom_ui_file_sys_cost</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">#FF4081</item>
         <item name="android:background">@color/translate</item>
     </style>
     <!--透明，有任务栏电量时间等-->

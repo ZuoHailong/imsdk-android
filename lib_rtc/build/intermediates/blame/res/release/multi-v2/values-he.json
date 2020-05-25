@@ -1,0 +1,48 @@
+{
+    "logs": [
+        {
+            "outputFile": "E:\\workspace\\github\\imsdk-android\\lib_rtc\\build\\intermediates\\res\\merged\\release\\values-he\\values-he.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\17a38f0479bcb7e5fee8c0ced3d68b4c\\Android-PullToRefresh-2.1.1\\res\\values-he\\values.xml",
+                    "from": {
+                        "startLines": "6,7,8",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "273,341,408",
+                        "endColumns": "67,66,70",
+                        "endOffsets": "336,403,474"
+                    },
+                    "to": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,123,190",
+                        "endColumns": "67,66,70",
+                        "endOffsets": "118,185,256"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "E:\\workspace\\github\\imsdk-android\\lib_rtc\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-he\\values-he.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\17a38f0479bcb7e5fee8c0ced3d68b4c\\Android-PullToRefresh-2.1.1\\res\\values-he\\values.xml",
+                    "from": {
+                        "startLines": "6,7,8",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "273,341,408",
+                        "endColumns": "67,66,70",
+                        "endOffsets": "336,403,474"
+                    },
+                    "to": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,123,190",
+                        "endColumns": "67,66,70",
+                        "endOffsets": "118,185,256"
+                    }
+                }
+            ]
+        }
+    ]
+}

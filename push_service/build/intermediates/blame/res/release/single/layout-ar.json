@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "E:\\workspace\\github\\imsdk-android\\push_service\\build\\intermediates\\res\\merged\\release\\layout-ar\\upsdk_app_dl_progress_dialog.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\f1c7c29869c8efa32c2719c61d9e4f48\\base-2.6.0.301\\res\\layout-ar\\upsdk_app_dl_progress_dialog.xml"
+    },
+    {
+        "merged": "E:\\workspace\\github\\imsdk-android\\push_service\\build\\intermediates\\res\\merged\\release\\layout-ar\\upsdk_ota_update_view.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\f1c7c29869c8efa32c2719c61d9e4f48\\base-2.6.0.301\\res\\layout-ar\\upsdk_ota_update_view.xml"
+    }
+]

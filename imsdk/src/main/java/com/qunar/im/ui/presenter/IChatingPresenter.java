@@ -6,6 +6,7 @@ import com.qunar.im.base.jsonbean.QunarLocation;
 import com.qunar.im.base.jsonbean.VideoMessageResult;
 import com.qunar.im.base.module.IMMessage;
 import com.qunar.im.ui.presenter.views.IChatView;
+import com.qunar.im.ui.presenter.views.IChatViewN;
 
 import java.util.List;
 
