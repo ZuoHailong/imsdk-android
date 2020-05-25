@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="atom_rtc_light_gray_33">#FF333333</color>
+    <color name="atom_rtc_primary_color">#FF03BB64</color>
+    <color name="atom_rtc_red_67">#E86767</color>
+    <color name="atom_rtc_trans_white">#19FFFFFF</color>
+    <color name="atom_rtc_white">#FFFFFFFF</color>
+    <dimen name="atom_rtc_container_margin">16dp</dimen>
+    <dimen name="atom_rtc_image_mid_size">48dp</dimen>
+    <dimen name="atom_rtc_input_height">48dip</dimen>
+    <dimen name="atom_rtc_text_size_medium">16sp</dimen>
+    <dimen name="atom_rtc_text_size_micro">12sp</dimen>
+    <dimen name="atom_rtc_text_size_small">14sp</dimen>
+    <string name="atom_rtc_calling">calling</string>
+    <string name="atom_rtc_canceled">Canceled</string>
+    <string name="atom_rtc_canceled_by_caller">Call Canceled by caller</string>
+    <string name="atom_rtc_deny">Declined</string>
+    <string name="atom_rtc_deny_other">Call Declined</string>
+    <string name="atom_rtc_duration">Duration：%s</string>
+    <string name="atom_rtc_ic_app_name">atom_rtc</string>
+    <string name="atom_rtc_ic_call"></string>
+    <string name="atom_rtc_ic_camera_shooting"></string>
+    <string name="atom_rtc_ic_camera_turn"></string>
+    <string name="atom_rtc_ic_diconnect"></string>
+    <string name="atom_rtc_ic_loudspeaker"></string>
+    <string name="atom_rtc_ic_mic"></string>
+    <string name="atom_rtc_ic_mute"></string>
+    <string name="atom_rtc_ic_ting"></string>
+    <string name="atom_rtc_pref_speakerphone_default">true</string>
+    <string name="atom_rtc_rtcinvite">Invite you to</string>
+    <string name="atom_rtc_rtcinviteaudio"> audio</string>
+    <string name="atom_rtc_rtcinvitechat"> chat...</string>
+    <string name="atom_rtc_rtcinvitevideo"> video</string>
+    <string name="atom_rtc_timeout">"Call wasn't answered"</string>
+    <string name="atom_rtc_trylater">The other side is busy, please try again later
+</string>
+    <string name="pub_imsdk_rtc_camera">Camera</string>
+    <string name="pub_imsdk_rtc_hungup">Hang up</string>
+    <string name="pub_imsdk_rtc_microphone">Mute</string>
+    <string name="pub_imsdk_rtc_mute">Hands-free</string>
+    <string name="pub_imsdk_rtc_pickup">Accept</string>
+</resources>

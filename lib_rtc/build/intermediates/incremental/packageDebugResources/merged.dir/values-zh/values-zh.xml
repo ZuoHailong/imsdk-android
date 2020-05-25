@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="atom_rtc_calling">正在呼叫</string>
+    <string name="atom_rtc_canceled">已取消</string>
+    <string name="atom_rtc_canceled_by_caller">对方已取消</string>
+    <string name="atom_rtc_deny">已拒绝</string>
+    <string name="atom_rtc_deny_other">对方已拒绝</string>
+    <string name="atom_rtc_duration">通话时长：%s</string>
+    <string name="atom_rtc_ic_app_name">atom_rtc</string>
+    <string name="atom_rtc_ic_call"></string>
+    <string name="atom_rtc_ic_camera_shooting"></string>
+    <string name="atom_rtc_ic_camera_turn"></string>
+    <string name="atom_rtc_ic_diconnect"></string>
+    <string name="atom_rtc_ic_loudspeaker"></string>
+    <string name="atom_rtc_ic_mic"></string>
+    <string name="atom_rtc_ic_mute"></string>
+    <string name="atom_rtc_ic_ting"></string>
+    <string name="atom_rtc_pref_speakerphone_default">true</string>
+    <string name="atom_rtc_rtcinvite">邀请你进行</string>
+    <string name="atom_rtc_rtcinviteaudio">语音</string>
+    <string name="atom_rtc_rtcinvitechat">聊天...</string>
+    <string name="atom_rtc_rtcinvitevideo">视频</string>
+    <string name="atom_rtc_timeout">对方无人接通</string>
+    <string name="atom_rtc_trylater">对方正与其他人通话，请稍后再试</string>
+    <string name="pub_imsdk_rtc_camera">摄像头</string>
+    <string name="pub_imsdk_rtc_hungup">挂断</string>
+    <string name="pub_imsdk_rtc_microphone">麦克风</string>
+    <string name="pub_imsdk_rtc_mute">免提</string>
+    <string name="pub_imsdk_rtc_pickup">接听</string>
+</resources>
