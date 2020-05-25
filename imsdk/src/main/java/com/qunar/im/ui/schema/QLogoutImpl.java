@@ -6,7 +6,6 @@ import com.qunar.im.ui.presenter.ILoginPresenter;
 import com.qunar.im.ui.presenter.impl.LoginPresenter;
 import com.qunar.im.ui.activity.IMBaseActivity;
 import com.qunar.im.ui.activity.TabMainActivity;
-import com.qunar.im.ui.services.PushServiceUtils;
 
 import java.util.Map;
 
@@ -20,7 +19,6 @@ public class QLogoutImpl implements QChatSchemaService {
     @Override
     public boolean startActivityAndNeedWating(final IMBaseActivity context, Map<String, String> map) {
 
-        PushServiceUtils.stopAMDService(context);
         final ILoginPresenter loginPresenter = new LoginPresenter();
         loginPresenter.logout();
 

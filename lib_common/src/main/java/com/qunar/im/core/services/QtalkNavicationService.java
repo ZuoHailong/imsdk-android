@@ -98,10 +98,6 @@ public class QtalkNavicationService {
     private String videoHost;
 
     //checkconfig配置url
-    public static String HONGBAO_URL = "";
-    public static String HONGBAO_BALANCE = "";
-    public static String MY_HONGBAO = "";
-    public static String AA_PAY_URL = "";
     public static String THANKS_URL = "";
     public static String SEND_ACTIVITY = "";
     public static String COMPANY = "qunar";
@@ -812,7 +808,4 @@ public class QtalkNavicationService {
         return appWeb;
     }
 
-    public String getPayurl() {
-        return payurl;
-    }
 }

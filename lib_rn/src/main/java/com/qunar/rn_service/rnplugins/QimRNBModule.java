@@ -130,8 +130,6 @@ import de.greenrobot.event.EventBus;
 public class QimRNBModule extends ReactContextBaseJavaModule implements IMNotificaitonCenter.NotificationCenterDelegate, PermissionCallback {
 
     private static final String MyMedal = "MyMedal";
-    private static final String MyRedBag = "MyRedBag";
-    private static final String BalanceInquiry = "BalanceInquiry";
     private static final String AccountInfo = "AccountInfo";
     private static final String MyFile = "MyFile";
     private static final String DeveloperChat = "DeveloperChat";
@@ -539,13 +537,6 @@ public class QimRNBModule extends ReactContextBaseJavaModule implements IMNotifi
                 String userid = params.getString("userId");
                 NativeApi.openUserMedal(QtalkStringUtils.addIdDomain(userid));
                 break;
-            case MyRedBag:
-                NativeApi.openUserHongBao();
-                break;
-            case BalanceInquiry:
-                NativeApi.openUserHongBaoBalance();
-                break;
-
             case AccountInfo:
                 NativeApi.openAccountInfo();
                 break;

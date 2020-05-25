@@ -93,7 +93,6 @@ import com.qunar.im.base.view.faceGridView.EmoticonEntity;
 import com.qunar.im.common.CommonConfig;
 import com.qunar.im.common.CurrentPreference;
 import com.qunar.im.core.manager.IMLogicManager;
-import com.qunar.im.core.manager.IMPayManager;
 import com.qunar.im.core.services.QtalkNavicationService;
 import com.qunar.im.core.utils.GlobalConfigManager;
 import com.qunar.im.log.LogConstans;
@@ -106,7 +105,6 @@ import com.qunar.im.permission.PermissionUtils;
 import com.qunar.im.protobuf.Event.QtalkEvent;
 import com.qunar.im.protobuf.common.ProtoMessageOuterClass;
 import com.qunar.im.protobuf.dispatch.DispatchHelper;
-import com.qunar.im.thirdpush.core.QPushClient;
 import com.qunar.im.ui.R;
 import com.qunar.im.ui.adapter.ChatViewAdapter;
 import com.qunar.im.ui.adapter.ExtendChatViewAdapter;
@@ -215,7 +213,6 @@ public class PbChatActivity extends SwipeBackActivity implements AtManager.AtTex
     public static final int AT_MEMBER = 0x13;//forresult的key 应该为开启所在群成员列表,方便@
     public static final int RECORD_VIDEO = 0x14;//录制视频
     public static final int TRANSFER_CONVERSATION_REQUEST_CODE = 0x15;//会话转移
-    public static final int HONGBAO = 0x16;//红包
     public static final int ADD_EMOTICON = 0x32;//添加表情
     public static final int ACTIVITY_SELECT_VIDEO = 0x64;//文件选择视频
     public static final int UPDATE_NICK = 0x65;
@@ -520,8 +517,6 @@ public class PbChatActivity extends SwipeBackActivity implements AtManager.AtTex
     @Override
     protected void onResume() {
         super.onResume();
-        //push清理
-        QPushClient.clearNotification(this);
         Logger.i("分享:isFirstInit" + isFirstInit);
         if (isFirstInit) {
             clearMessage();
@@ -1424,7 +1419,7 @@ public class PbChatActivity extends SwipeBackActivity implements AtManager.AtTex
         item.textId = getString(R.string.atom_ui_function_photo);
         item.hanlder = () -> {
             checkShowGallary();
-            saveChatWindowActLog(FuncMap.PHOTO,"相册","会话详情页-扩展键盘");
+            saveChatWindowActLog(FuncMap.PHOTO, "相册", "会话详情页-扩展键盘");
         };
         funcMap.regisger(item);
 
@@ -1434,7 +1429,7 @@ public class PbChatActivity extends SwipeBackActivity implements AtManager.AtTex
         item.textId = getString(R.string.atom_ui_user_camera);
         item.hanlder = () -> {
             checkShowCamera();
-            saveChatWindowActLog(FuncMap.CAMERA,"拍照","会话详情页-扩展键盘");
+            saveChatWindowActLog(FuncMap.CAMERA, "拍照", "会话详情页-扩展键盘");
         };
         funcMap.regisger(item);
         if (CurrentPreference.getInstance().isMerchants() && GlobalConfigManager.isQchatPlat()
@@ -1445,7 +1440,7 @@ public class PbChatActivity extends SwipeBackActivity implements AtManager.AtTex
             item.textId = getString(R.string.atom_ui_function_quickreply);
             item.hanlder = () -> {
                 quickReplySwitch();
-                saveChatWindowActLog(FuncMap.QUICKREPLY,"快捷回复","会话详情页-扩展键盘");
+                saveChatWindowActLog(FuncMap.QUICKREPLY, "快捷回复", "会话详情页-扩展键盘");
             };
             funcMap.regisger(item);
         }
@@ -1460,7 +1455,7 @@ public class PbChatActivity extends SwipeBackActivity implements AtManager.AtTex
                                     PermissionDispatcher.REQUEST_WRITE_EXTERNAL_STORAGE,
                                     PermissionDispatcher.REQUEST_READ_EXTERNAL_STORAGE}, PbChatActivity.this,
                             READ_FILE);
-            saveChatWindowActLog(FuncMap.FILE,"文件","会话详情页-扩展键盘");
+            saveChatWindowActLog(FuncMap.FILE, "文件", "会话详情页-扩展键盘");
         };
         funcMap.regisger(item);
 
@@ -1474,7 +1469,7 @@ public class PbChatActivity extends SwipeBackActivity implements AtManager.AtTex
                                     PermissionDispatcher.REQUEST_ACCESS_COARSE_LOCATION,
                                     PermissionDispatcher.REQUEST_ACCESS_FINE_LOCATION}, PbChatActivity.this,
                             READ_LOCATION);
-            saveChatWindowActLog(FuncMap.LOCATION,"地理位置","会话详情页-扩展键盘");
+            saveChatWindowActLog(FuncMap.LOCATION, "地理位置", "会话详情页-扩展键盘");
         };
         funcMap.regisger(item);
 
@@ -1484,7 +1479,7 @@ public class PbChatActivity extends SwipeBackActivity implements AtManager.AtTex
         item.textId = getString(R.string.atom_ui_function_video);
         item.hanlder = () -> {
             chooseVideoSource();
-            saveChatWindowActLog(FuncMap.VIDEO,"视频文件","会话详情页-扩展键盘");
+            saveChatWindowActLog(FuncMap.VIDEO, "视频文件", "会话详情页-扩展键盘");
         };
         funcMap.regisger(item);
         //阅后即焚
@@ -1523,7 +1518,7 @@ public class PbChatActivity extends SwipeBackActivity implements AtManager.AtTex
             item.textId = getString(R.string.atom_ui_button_transfer_tip);
             item.hanlder = () -> {
                 transferConversation();
-                saveChatWindowActLog(FuncMap.TRANSFER,"会话转移","会话详情页-扩展键盘");
+                saveChatWindowActLog(FuncMap.TRANSFER, "会话转移", "会话详情页-扩展键盘");
             };
             funcMap.regisger(item);
         }
@@ -1538,7 +1533,7 @@ public class PbChatActivity extends SwipeBackActivity implements AtManager.AtTex
         item.hanlder = () -> {
             giveLuckyMoney(false);
 //                chooseRtcType();
-            saveChatWindowActLog(FuncMap.HONGBAO,"红包","会话详情页-扩展键盘");
+            saveChatWindowActLog(FuncMap.HONGBAO, "红包", "会话详情页-扩展键盘");
         };
         funcMap.regisger(item);
 
@@ -1553,7 +1548,7 @@ public class PbChatActivity extends SwipeBackActivity implements AtManager.AtTex
             item.textId = getString(R.string.atom_ui_textbar_button_aa);
             item.hanlder = () -> {
                 giveLuckyMoney(true);
-                saveChatWindowActLog(FuncMap.AA,"AA付款","会话详情页-扩展键盘");
+                saveChatWindowActLog(FuncMap.AA, "AA付款", "会话详情页-扩展键盘");
             };
             funcMap.regisger(item);
         }
@@ -1566,7 +1561,7 @@ public class PbChatActivity extends SwipeBackActivity implements AtManager.AtTex
             item.textId = getString(R.string.atom_ui_textbar_button_shake);
             item.hanlder = () -> {
                 shake();
-                saveChatWindowActLog(FuncMap.Shock,"窗口抖动","会话详情页-扩展键盘");
+                saveChatWindowActLog(FuncMap.Shock, "窗口抖动", "会话详情页-扩展键盘");
             };
             funcMap.regisger(item);
         }
@@ -1578,7 +1573,7 @@ public class PbChatActivity extends SwipeBackActivity implements AtManager.AtTex
             item.textId = getString(R.string.atom_ui_function_video_call);
             item.hanlder = () -> {
                 chooseRtcType();
-                saveChatWindowActLog(FuncMap.VIDEO_CALL,"视频聊天","会话详情页-扩展键盘");
+                saveChatWindowActLog(FuncMap.VIDEO_CALL, "视频聊天", "会话详情页-扩展键盘");
             };
             funcMap.regisger(item);
         }
@@ -1591,7 +1586,7 @@ public class PbChatActivity extends SwipeBackActivity implements AtManager.AtTex
             item.hanlder = () -> {
                 if (!isSnapMsg) {//阅后即焚不能开启加密
                     encryptConversation();
-                    saveChatWindowActLog(FuncMap.ENCRYPT,"加密会话","会话详情页-扩展键盘");
+                    saveChatWindowActLog(FuncMap.ENCRYPT, "加密会话", "会话详情页-扩展键盘");
                 }
             };
             funcMap.regisger(item);
@@ -1604,7 +1599,7 @@ public class PbChatActivity extends SwipeBackActivity implements AtManager.AtTex
             item.textId = getString(R.string.atom_ui_send_activity);
             item.hanlder = () -> {
                 sendActivity();
-                saveChatWindowActLog(FuncMap.ACTIVITY,"活动","会话详情页-扩展键盘");
+                saveChatWindowActLog(FuncMap.ACTIVITY, "活动", "会话详情页-扩展键盘");
 
             };
             funcMap.regisger(item);
@@ -1673,7 +1668,7 @@ public class PbChatActivity extends SwipeBackActivity implements AtManager.AtTex
                             builder.append(CurrentPreference.getInstance().getUserid());
                             builder.append("&rk=");
                             builder.append(CurrentPreference.getInstance().getVerifyKey());
-                            if(chatType.equals(String.valueOf(ConversitionType.MSG_TYPE_CONSULT_SERVER))){
+                            if (chatType.equals(String.valueOf(ConversitionType.MSG_TYPE_CONSULT_SERVER))) {
                                 builder.append("&qchatid=5&type=consult");
                                 builder.append("&user_id=");
                                 builder.append(getToId());
@@ -1681,11 +1676,11 @@ public class PbChatActivity extends SwipeBackActivity implements AtManager.AtTex
                                 builder.append(CurrentPreference.getInstance().getPreferenceUserId());
                                 builder.append("&realto=");
                                 builder.append(getRealJid());
-                            }else if(chatType.equals(String.valueOf(ConversitionType.MSG_TYPE_GROUP))){
+                            } else if (chatType.equals(String.valueOf(ConversitionType.MSG_TYPE_GROUP))) {
                                 builder.append("&group_id=");
                                 builder.append(getToId());
                                 builder.append("&type=groupchat");
-                            }else {
+                            } else {
                                 builder.append("&user_id=");
                                 builder.append(getToId());
                                 builder.append("&type=chat");
@@ -1700,7 +1695,7 @@ public class PbChatActivity extends SwipeBackActivity implements AtManager.AtTex
                             intent.setData(Uri.parse(builder.toString()));
                             intent.putExtra(WebMsgActivity.IS_HIDE_BAR, true);
                             startActivity(intent);
-                            saveChatWindowActLog(item.id,item.textId,"会话详情页-扩展键盘");
+                            saveChatWindowActLog(item.id, item.textId, "会话详情页-扩展键盘");
                         };
                     } else if (funcButtonDesc.linkType == 2) {//request
                         item.hanlder = () -> {
@@ -1714,7 +1709,7 @@ public class PbChatActivity extends SwipeBackActivity implements AtManager.AtTex
                             } catch (JSONException e) {
                                 Logger.i(e.getMessage());
                             }
-                            saveChatWindowActLog(item.id,item.textId,"会话详情页-扩展键盘");
+                            saveChatWindowActLog(item.id, item.textId, "会话详情页-扩展键盘");
                         };
                     } else if (funcButtonDesc.linkType == 4) {//schema
                         item.hanlder = () -> {
@@ -1896,7 +1891,7 @@ public class PbChatActivity extends SwipeBackActivity implements AtManager.AtTex
         atom_ui_refence_layout = (LinearLayout) findViewById(R.id.atom_ui_refence_layout);
         atom_ui_refence_text = (TextView) findViewById(R.id.atom_ui_refence_text);
         atom_ui_refence_close = (ImageView) findViewById(R.id.atom_ui_refence_close);
-        atom_ui_refence_close.setOnClickListener((view)-> {
+        atom_ui_refence_close.setOnClickListener((view) -> {
             refrenceString = "";
             atom_ui_refence_text.setText("");
             atom_ui_refence_layout.setVisibility(View.GONE);
@@ -2042,7 +2037,7 @@ public class PbChatActivity extends SwipeBackActivity implements AtManager.AtTex
     public void setNewMsg2DialogueRegion(final IMMessage newMsg) {
 
         runOnUiThread(() -> {
-            if(isFinishing()){
+            if (isFinishing()) {
                 return;
             }
             if (unreadMsgCount.intValue() > 0) {
@@ -2183,7 +2178,7 @@ public class PbChatActivity extends SwipeBackActivity implements AtManager.AtTex
     @Override
     public void setHistoryMessage(final List<IMMessage> historyMessage, final int unread) {
         runOnUiThread(() -> {
-            if(isFinishing()){
+            if (isFinishing()) {
                 return;
             }
             unreadMsgCount.set(unread);
@@ -2192,7 +2187,7 @@ public class PbChatActivity extends SwipeBackActivity implements AtManager.AtTex
 
                 pbChatViewAdapter.setMessages(historyMessage);
                 if (chat_region.getRefreshableView().getCount() > 0)
-                chat_region.getRefreshableView().setSelection(chat_region.getRefreshableView().getCount() - 1);
+                    chat_region.getRefreshableView().setSelection(chat_region.getRefreshableView().getCount() - 1);
             }
             // TODO: 2017/9/5 分享消息？
             handlerReceivedData();
@@ -2247,7 +2242,7 @@ public class PbChatActivity extends SwipeBackActivity implements AtManager.AtTex
 
         String msg = unread + (String) getText(R.string.atom_ui_tip_unread_message);
         textView.setText(msg);
-        textView.setPadding(padding*2, 0, 0, 0);
+        textView.setPadding(padding * 2, 0, 0, 0);
         textView.setOnClickListener((view) -> {
             chat_region.getRefreshableView().smoothScrollToPosition(pbChatViewAdapter.getCount() - unreadMsgCount.intValue() - 1);
             clearUnread();
@@ -2258,7 +2253,7 @@ public class PbChatActivity extends SwipeBackActivity implements AtManager.AtTex
         final LayoutTransition layoutTransition = new LayoutTransition();
         layoutTransition.setAnimator(LayoutTransition.APPEARING, ObjectAnimator.ofFloat(this, "scaleX", 0, 1));
         getHandler().postDelayed(() -> {
-            if(!isFinishing()){
+            if (!isFinishing()) {
                 chating_view.setLayoutTransition(layoutTransition);
                 chating_view.addView(linearLayout);
             }
@@ -2277,7 +2272,7 @@ public class PbChatActivity extends SwipeBackActivity implements AtManager.AtTex
         tipsFloatView.setTag(TAG_SEARCH_VIEW);
         tipsFloatView.setClickListener(v -> {
             Intent intent = ReflectUtil.getQtalkServiceRNActivityIntent(PbChatActivity.this);
-            if(intent == null){
+            if (intent == null) {
                 return;
             }
             intent.putExtra("module", "Search");
@@ -2293,7 +2288,7 @@ public class PbChatActivity extends SwipeBackActivity implements AtManager.AtTex
         final LayoutTransition layoutTransition = new LayoutTransition();
         layoutTransition.setAnimator(LayoutTransition.APPEARING, ObjectAnimator.ofFloat(this, "scaleX", 0, 1));
         getHandler().postDelayed(() -> {
-            if(!isFinishing()){
+            if (!isFinishing()) {
                 chating_view.setLayoutTransition(layoutTransition);
                 chating_view.addView(tipsFloatView);
             }
@@ -3122,12 +3117,12 @@ public class PbChatActivity extends SwipeBackActivity implements AtManager.AtTex
     }
 
     public void chooseRtcType() {
-        if(isFromChatRoom){
+        if (isFromChatRoom) {
             PermissionDispatcher.
                     requestPermissionWithCheck(PbChatActivity.this, new int[]{PermissionDispatcher.REQUEST_CAMERA,
                                     PermissionDispatcher.REQUEST_RECORD_AUDIO}, PbChatActivity.this,
                             REAL_GROUP_VIDEO);
-        }else {
+        } else {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             View view = LayoutInflater.from(this).inflate(R.layout.atom_ui_dialog_choose_picture, (ViewGroup) this.getWindow().getDecorView(), false);
             TextView tv_change_gravtar_photos = (TextView) view.findViewById(R.id.tv_change_gravtar_photos);
@@ -3254,7 +3249,7 @@ public class PbChatActivity extends SwipeBackActivity implements AtManager.AtTex
     }
 
     public void giveLuckyMoney(boolean isAA) {
-        if(TextUtils.isEmpty(QtalkNavicationService.getInstance().getPayurl())){
+        if (TextUtils.isEmpty(QtalkNavicationService.getInstance().getPayurl())) {
             StringBuilder sb = new StringBuilder();
             String username = CurrentPreference.getInstance().getUserid();
             sb.append(isAA ? QtalkNavicationService.AA_PAY_URL : QtalkNavicationService.HONGBAO_URL)
@@ -3271,7 +3266,7 @@ public class PbChatActivity extends SwipeBackActivity implements AtManager.AtTex
             intent.putExtra(QunarWebActvity.IS_HIDE_BAR, true);
             intent.setData(uri);
             startActivityForResult(intent, HONGBAO);
-        }else {
+        } else {
             chatingPresenter.checkAlipayAccount();
         }
     }
@@ -3611,8 +3606,8 @@ public class PbChatActivity extends SwipeBackActivity implements AtManager.AtTex
             startActivity(i);
 //            connectionUtil.lanuchChatVideo(false, CurrentPreference.getInstance().getUserid(), (isconsult ? getRealJid() : getToId()));
 //            ((IP2pRTC) chatingPresenter).startAudioRtc();
-        } else if (requestCode == REAL_GROUP_VIDEO){
-            connectionUtil.lanuchGroupVideo(jid,qtNewActionBar.getTextTitle().getText().toString());
+        } else if (requestCode == REAL_GROUP_VIDEO) {
+            connectionUtil.lanuchGroupVideo(jid, qtNewActionBar.getTextTitle().getText().toString());
             ((IPGroupRtc) chatingPresenter).startGroupVideoRtc();
         }
     }
@@ -4223,63 +4218,6 @@ public class PbChatActivity extends SwipeBackActivity implements AtManager.AtTex
     @Override
     public void sendRobotMsg(String msg) {
         chatingPresenter.sendRobotMsg(msg);
-    }
-
-    @Override
-    public void payRedEnvelopChioce(String type,String rid) {
-        Intent intent = ReflectUtil.getQtalkServiceRNActivityIntent(PbChatActivity.this);
-        if(intent == null){
-            return;
-        }
-        switch (type){
-            case Constants.Alipay.RED_ENVELOP_SEND:
-                intent.putExtra("module", Constants.RNKey.PAY);
-                intent.putExtra("Screen", "SendRedPack");
-
-                intent.putExtra("xmppid", jid);
-                intent.putExtra("isChatRoom",isFromChatRoom);
-                startActivity(intent);
-                break;
-            case Constants.Alipay.RED_ENVELOP_DETAIL:
-                intent.putExtra("module", Constants.RNKey.PAY);
-                intent.putExtra("Screen", "RedPackDetail");
-                intent.putExtra("rid", rid);//红包ID
-                intent.putExtra("xmppid", jid);
-                intent.putExtra("isChatRoom",isFromChatRoom);
-                startActivity(intent);
-                break;
-        }
-    }
-
-    @Override
-    public void payAuth(final String authInfo) {
-        IMPayManager.getInstance().payAuth(this,authInfo,resultStatus -> {
-            if(TextUtils.equals(resultStatus, "6001")){
-                toast(getString(R.string.atom_ui_user_cancel));
-            } else {
-                toast(getString(R.string.atom_ui_auth_fail));
-            }
-        });
-    }
-
-    @Override
-    public void payOrder(String orderInfo) {
-        IMPayManager.getInstance().payOrder(this, orderInfo, resultStatus -> {
-            if (TextUtils.equals(resultStatus, "9000")) {
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }finally {
-                    connectionUtil.sendEvent(QtalkEvent.PAY_SUCCESS,new Object());
-                    toast(getString(R.string.atom_ui_send_red_packet_success));
-                }
-            } else if(TextUtils.equals(resultStatus, "6001")){
-                toast(getString(R.string.atom_ui_user_cancel));
-            } else {
-                toast(getString(R.string.atom_ui_pay_fail));
-            }
-        });
     }
 
     @Override

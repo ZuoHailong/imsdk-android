@@ -37,7 +37,7 @@ dependencies {
 
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     api 'com.startalk.im:sdk-base:3.0.7'
-    api 'com.startalk.im:pay:15.6.5'
+//    api 'com.startalk.im:pay:15.6.5'
     api 'androidx.appcompat:appcompat:1.0.0'
     api 'androidx.legacy:legacy-support-v4:1.0.0'
 }

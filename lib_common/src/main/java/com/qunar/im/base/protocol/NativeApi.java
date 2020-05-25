@@ -69,18 +69,6 @@ public class NativeApi {
         CommonConfig.globalContext.startActivity(intent);
     }
 
-    public static void openUserHongBao() {
-        Intent intent = new Intent("android.intent.action.VIEW", Uri.parse(CommonConfig.schema + "://qunarchat/hongbao"));
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        CommonConfig.globalContext.startActivity(intent);
-    }
-
-    public static void openUserHongBaoBalance() {
-        Intent intent = new Intent("android.intent.action.VIEW", Uri.parse(CommonConfig.schema + "://qunarchat/hongbao_balance"));
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        CommonConfig.globalContext.startActivity(intent);
-    }
-
     public static void openAccountInfo() {
         Intent intent = new Intent("android.intent.action.VIEW", Uri.parse(CommonConfig.schema + "://qunarchat/account_info"));
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

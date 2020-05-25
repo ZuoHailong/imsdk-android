@@ -30,7 +30,6 @@ import com.qunar.im.core.services.QtalkNavicationService;
 import com.qunar.im.core.utils.GlobalConfigManager;
 import com.qunar.im.log.LogDatabaseManager;
 import com.qunar.im.protobuf.Event.QtalkEvent;
-import com.qunar.im.thirdpush.QTPushConfiguration;
 import com.qunar.im.ui.R;
 import com.qunar.im.ui.activity.PbChatActivity;
 import com.qunar.im.ui.fragment.BuddiesFragment;
@@ -43,8 +42,6 @@ import com.qunar.im.ui.util.ProfileUtils;
 import com.qunar.im.utils.AppFrontBackHelper;
 import com.qunar.im.utils.ConnectionUtil;
 import com.qunar.rn_service.fragment.RNContactsFragment;
-import com.xiaomi.channel.commonutils.logger.LoggerInterface;
-import com.xiaomi.mipush.sdk.Logger;
 
 import java.util.List;
 
@@ -98,32 +95,7 @@ public class QIMSdk implements IMNotificaitonCenter.NotificationCenterDelegate {
 
         initImagePicker();
 
-        //push日志
-        LoggerInterface newLogger = new LoggerInterface() {
-            @Override
-            public void setTag(String tag) {
-                // ignore
-            }
-            @Override
-            public void log(String content, Throwable t) {
-                com.orhanobut.logger.Logger.i("mipush日志：" + content + "  t: " + t);
-            }
-            @Override
-            public void log(String content) {
-                com.orhanobut.logger.Logger.i("mipush日志：" + content);
-            }
-        };
-        Logger.setLogger(CommonConfig.globalContext, newLogger);
-
-
-        //初始化push
-        QTPushConfiguration.initPush(CommonConfig.globalContext);
-
         LogDatabaseManager.getInstance().initDB(CommonConfig.globalContext);
-
-//        if (!ConnectionUtil.getInstance().isCanAutoLogin()) {
-//            QTPushConfiguration.unRegistPush(CommonConfig.globalContext);
-//        }
 
         ConnectionUtil.getInstance().addEvent(this, QtalkEvent.LOGIN_EVENT);
         ConnectionUtil.getInstance().addEvent(this, QtalkEvent.LOGIN_FAILED);
@@ -163,13 +135,6 @@ public class QIMSdk implements IMNotificaitonCenter.NotificationCenterDelegate {
             CommonConfig.isQtalk = applicationInfo.metaData.getBoolean("serverDoMain");
             CommonConfig.schema = applicationInfo.metaData.getString("SCHEME");
             CommonConfig.currentPlat = applicationInfo.metaData.getString("currentPlat");
-            QTPushConfiguration.OPPO_APP_ID = applicationInfo.metaData.getString("OPPO_APP_ID");
-            QTPushConfiguration.OPPO_APP_KEY = applicationInfo.metaData.getString("OPPO_APP_KEY");
-            QTPushConfiguration.OPPO_APP_SECRET = applicationInfo.metaData.getString("OPPO_APP_SECRET");
-            QTPushConfiguration.MIPUSH_APP_ID = applicationInfo.metaData.getString("MIPUSH_APP_ID");
-            QTPushConfiguration.MIPUSH_APP_KEY = applicationInfo.metaData.getString("MIPUSH_APP_KEY");
-            QTPushConfiguration.MEIZU_APP_ID = applicationInfo.metaData.getString("MEIZU_APP_ID");
-            QTPushConfiguration.MEIZU_APP_KEY = applicationInfo.metaData.getString("MEIZU_APP_KEY");
         }
     }
 

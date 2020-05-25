@@ -699,25 +699,7 @@ public class SingleSessionPresenter extends ChatPresenter implements ICloudRecor
                     chatView.setNewMsg2DialogueRegion(sendMesg);
                 }
                 break;
-            case QtalkEvent.PAY_RED_ENVELOP_CHOICE:
-                String result = (String) args[0];
-                String rid = "";
-                if(args.length > 1){
-                    rid = (String) args[1];
-                }
-                chatView.payRedEnvelopChioce(result,rid);
-                break;
-            case QtalkEvent.PAY_AUTH:
-                String authInfo = (String) args[0];
-                chatView.payAuth(authInfo);
-                break;
-            case QtalkEvent.PAY_ORDER:
-                String orderInfo = (String) args[0];
-                chatView.payOrder(orderInfo);
-                break;
-            case QtalkEvent.PAY_FAIL:
-                String fail = (String) args[0];
-                chatView.showToast(Constants.Alipay.AUTH.equals(fail) ? "账户校验失败！" : "支付失败！");
+            default:
                 break;
         }
     }
